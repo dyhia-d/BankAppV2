@@ -17,7 +17,7 @@
             <p>Nom : <h:inputText id="inputNom" value="#{customer.lastName}"  required="true" requiredMessage="Nom obligatoire"/> </p>
             <p>Prénom : <h:inputText id="inputPrenom" value="#{customer.firstName}" required="true" requiredMessage="Prénom obligatoire"/></p>
 
-            <h:commandButton type="submit" value="Confirmer" actionListener="#{customer.newCustomer}" action="customersList.xhtml"/> 
+            <h:commandButton type="submit" value="Confirmer" actionListener="#{customer.newCustomer}" action="createCustomerSuccess.xhtml"/> 
         </h:form>
 
     </h:body>
