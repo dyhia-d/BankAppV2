@@ -11,7 +11,7 @@
         <h:body>
             <h1>Liste des clients</h1>    
             <h:form>
-            <h:dataTable id="dtCustomers" var="cust" value="#{customerBean.customers}"> 
+                <h:dataTable id="dtCustomers" var="cust" value="#{customers.customers}"> 
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="Numéro"/>
