@@ -20,8 +20,9 @@ public class CustomerCreateBean implements Serializable {
     public CustomerCreateBean() {
     }
     
-    public void newCustomer(){
+    public String newCustomer(){
         services.saveCustomer(this.number, this.firstName, this.lastName);
+        return "success";
     }
 
     public int getNumber() {

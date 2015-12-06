@@ -8,8 +8,9 @@ package ch.hearc.ig.odi.customeraccount.bean;
 import ch.hearc.ig.odi.customeraccount.business.Account;
 import ch.hearc.ig.odi.customeraccount.business.Customer;
 import ch.hearc.ig.odi.customeraccount.services.Services;
+import java.io.Serializable;
 import java.util.ArrayList;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -18,8 +19,8 @@ import javax.inject.Named;
  * @author Dyhia.Dib
  */
 @Named(value = "customeredit")
-@RequestScoped
-public class CustomerEditBean {
+@SessionScoped
+public class CustomerEditBean implements Serializable {
 
     private int number;
     private String firstName;
