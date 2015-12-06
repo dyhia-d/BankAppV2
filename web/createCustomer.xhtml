@@ -15,9 +15,9 @@
             <h:panelGrid id="panel" columns="2" border="0" cellpadding="0" cellspacing="2">
 
                 <h:form>
-                    <p>#{resrc.number} : <h:inputText id="inputNumero" value="#{customer.number}" requiredMessage="#{resrc.err_number}" /></p>
-                    <p>#{resrc.name}: <h:inputText id="inputNom" value="#{customer.lastName}"  required="true" requiredMessage="#{resrc.err_name}"/> </p>
-                    <p>#{resrc.firstname}: <h:inputText id="inputPrenom" value="#{customer.firstName}" required="true" requiredMessage="#{resrc.err_firstname}"/></p>
+                    <p>#{resrc.number}<h:inputText id="inputNumero" value="#{customer.number}" requiredMessage="#{resrc.err_number}" /></p>
+                    <p>#{resrc.name}<h:inputText id="inputNom" value="#{customer.lastName}"  required="true" requiredMessage="#{resrc.err_name}"/> </p>
+                    <p>#{resrc.firstname}<h:inputText id="inputPrenom" value="#{customer.firstName}" required="true" requiredMessage="#{resrc.err_firstname}"/></p>
 
                     <h:commandButton id="submit" value="#{resrc.submit}" action="#{customer.saveCustomer}" />
        

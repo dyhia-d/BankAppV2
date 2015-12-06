@@ -25,11 +25,28 @@
     </navigation-rule>
     
     <navigation-rule>
+        <from-view-id>/customersList.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customerDetailsBean.showCustomer(cust)}</from-action>          
+            <from-outcome>show</from-outcome>
+            <to-view-id>/customerDetails.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
         <from-view-id>/createCustomer.xhtml</from-view-id>
         <navigation-case>
             <from-action>#{customer.saveCustomer}</from-action>          
             <from-outcome>success</from-outcome>
             <to-view-id>/createCustomerSuccess.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-action>#{customerDetailsBean.showCustomer(customer)}</from-action>          
+            <from-outcome>show</from-outcome>
+            <to-view-id>/customerDetails.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 

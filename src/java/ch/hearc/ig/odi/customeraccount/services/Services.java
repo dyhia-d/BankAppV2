@@ -23,14 +23,18 @@ public class Services implements Serializable{
     public Services(){
         bank = new Bank(1, "Raiffeisen Neuchâtel");
         
-        Customer cust = bank.addCustomer(1, "Alice", "Moreau");
+        Customer cust = bank.addCustomer(1, "Leia", "Organa");
         
         bank.addAccount("1", "Salaire", 0.001, cust);
         bank.addAccount("2", "Impots", 0.002, cust);
         
-        cust = bank.addCustomer(2, "Lucas", "Hertz");
+        cust = bank.addCustomer(2, "Han", "Solo");
         bank.addAccount("3", "Epargne", 0.002, cust);
         bank.addAccount("4", "Salaire", 0.001, cust);
+        
+        cust = bank.addCustomer(3, "Luke", "Skywalker");
+        bank.addAccount("5", "Cadeau", 0.002, cust);
+        bank.addAccount("6", "Salaire", 0.001, cust);
     }
     
     /**

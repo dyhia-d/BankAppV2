@@ -11,25 +11,26 @@
         <h:body> 
             <h:form>
                 <h:dataTable id="dtCustomers" var="cust" value="#{customers.customers}"> 
-                <h:column>
-                    <f:facet name="header">
-                        <h:outputText value="#{resrc.number}"/>
-                    </f:facet>
-                    <h:outputText value="#{cust.number }"/>
-                </h:column>
-                <h:column>
-                    <f:facet name="header">
-                        <h:outputText value="#{resrc.name}"/>
-                    </f:facet>
-                    <h:outputText value="#{cust.lastName}"/>
-                </h:column>
-                <h:column>
-                    <f:facet name="header">
-                        <h:outputText value="#{resrc.firstname}"/>
-                    </f:facet>
-                    <h:outputText value="#{cust.firstName}"/>
-                </h:column>
-            </h:dataTable>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{resrc.number}"/>
+                        </f:facet>
+                        <h:commandLink id="idLink" value="#{cust.number}" action="#{customerDetailsBean.showCustomer(cust)}" />
+
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{resrc.name}"/>
+                        </f:facet>
+                        <h:outputText value="#{cust.lastName}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{resrc.firstname}"/>
+                        </f:facet>
+                        <h:outputText value="#{cust.firstName}"/>
+                    </h:column>
+                </h:dataTable>
                 <h:commandButton type="submit" value="Ajouter" action="createCustomer.xhtml"/>
             </h:form>
 
