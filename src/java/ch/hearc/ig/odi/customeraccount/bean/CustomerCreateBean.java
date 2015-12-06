@@ -13,15 +13,14 @@ public class CustomerCreateBean implements Serializable {
     private int number;
     private String lastName;
     private String firstName;
-    
-    
-    @Inject
-    Services services;
+   @Inject Services services;
+   
+   
     public CustomerCreateBean() {
     }
     
-    public String newCustomer(){
-        services.saveCustomer(this.number, this.firstName, this.lastName);
+    public String saveCustomer(){
+        services.saveCustomer(number, lastName, firstName);
         return "success";
     }
 

@@ -19,7 +19,7 @@
                     <p>#{resrc.name}: <h:inputText id="inputNom" value="#{customer.lastName}"  required="true" requiredMessage="#{resrc.err_name}"/> </p>
                     <p>#{resrc.firstname}: <h:inputText id="inputPrenom" value="#{customer.firstName}" required="true" requiredMessage="#{resrc.err_firstname}"/></p>
 
-                    <h:commandButton id="submit" value="#{resrc.submit}" action="createCustomerSuccess.xhtml" />
+                    <h:commandButton id="submit" value="#{resrc.submit}" action="#{customer.saveCustomer}" />
        
                 </h:form>
                 <br />
